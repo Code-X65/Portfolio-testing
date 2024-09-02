@@ -1,0 +1,46 @@
+#introText {
+    white-space: pre-wrap; /* To preserve line breaks */
+  }
+
+  .typing {
+    border-right: 2px solid black;
+    animation: blink 0.7s step-end infinite;
+  }
+  .hidden {
+    opacity: 0;
+    transition: opacity 5s ease-in-out;
+}
+.fade-in {
+    opacity: 1;
+}
+
+  @keyframes blink {
+    from, to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: black;
+    }
+  }
+  #case-content,
+  #recent-work-container,
+  #test-info-container,
+  #contact,{
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.3s ease-out, transform 1s ease-out;
+}
+#case-content.fade-in,
+#contact.fade-in,
+#test-info-container.fade-in,
+#recent-work-container.fade-in{
+opacity: 1;
+transform: translateY(0);
+}
+
+#recent-work-container{
+  opacity: 0;
+    transform: translateY(90px);
+    transition: opacity 1.3s ease-out, transform 1.5s ease-out;
+}
+
